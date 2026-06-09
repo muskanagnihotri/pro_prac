@@ -101,7 +101,7 @@ def plot_metrics_relationship(df):
     # TODO: 13. Create a Scatter Plot (Bubble Chart)
     # x="likes", y="comments"
     # size="shares" (This makes it a bubble chart)
-    sns.scatterplot(data=df, x='Likes',y='comments',size='shares')
+    sns.scatterplot(data=df, x='likes',y='comments',size='shares')
     # TODO: 14. Add title and labels
     # Title: "Likes vs Comments (Size = Shares)"
     plt.title("Likes vs Comments (Size = Shares)")
@@ -121,7 +121,7 @@ def plot_engagement_distribution(df):
     # TODO: 15. Reshape the data using df.melt()
     # Transforms the columns "likes", "comments", "shares" into rows
     # Hint: id_vars="post_id", value_vars=["likes", "comments", "shares"], var_name="metric", value_name="count"
-    melted_df = df.melt()
+    melted_df = df.melt(id_vars='post_id',value_vars=['likes','comments','shares'],var_name='metric',value_name='count')
 
 
     # TODO: 16. Set figure size to 8 inches by 6 inches
@@ -130,13 +130,13 @@ def plot_engagement_distribution(df):
     # TODO: 17. Create a Box Plot using the melted_df
     # x="metric", y="count", hue="metric"
     # palette="Set2", legend=False
-    sns.boxplot(data=df,x='metric',y='count',hue='metric',palette='Set2',legend=False)
+    sns.boxplot(data=melted_df,x='metric',y='count',hue='metric',palette='Set2',legend=False)
 
     # TODO: 18. Add title and labels
     # Title: "Distribution of Engagement Metrics"
     plt.title("Distribution of Engagement Metrics")
-    plt.xlabel("Likes")
-    plt.ylabel("Comments")
+    plt.xlabel("Metric Type")
+    plt.ylabel("Count")
 
     filename = "engagement_distribution.png"
 
