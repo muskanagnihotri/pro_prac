@@ -1,13 +1,10 @@
-import pandas as pd
-
-
 # 1. Load Dataset
 def load_data():
     """
     Load the Udemy courses dataset.
     """
     # TODO: Read the dataset, file "udemy_courses.csv"
-    df = __________
+    df = pd.read_csv("udemy_courses.csv")
     
     return df
 
@@ -19,11 +16,11 @@ def inspect_data(df):
     """
     print("\nDataset Info:")
     # TODO: Print the info of the dataframe to check types and missing values 
-    __________
+    print(df.info)
 
     print("\nSummary Statistics:")
     # TODO: Print the summary statistics of the dataset (describe)
-    __________
+    print(df.summary)
 
 
 # 3. Handle Missing Data
@@ -34,15 +31,15 @@ def clean_missing(df):
     # 1. Fill missing 'course_title'
     if "course_title" in df.columns:
         # TODO: Fill NaNs in 'course_title' with "Unknown Course"
-        df["course_title"] = __________
+        df["course_title"] = df["Unknown Course"]
 
     # 2. Fill missing 'num_subscribers'
     # TODO: Fill NaNs in 'num_subscribers' with 0
-    df["num_subscribers"] = __________
+    df["num_subscribers"] = df[0]
 
     # 3. Drop rows with critical missing data
     # TODO: Drop rows where 'price' OR 'num_lectures' is missing (NaN)
-    df = __________
+    df = df.dropna("price",num_lectures)
 
     return df
 
@@ -54,7 +51,7 @@ def remove_duplicates(df):
     """
     # TODO: Drop duplicate rows based on the subset ['course_title', 'subject']
     # Hint: Keep the 'first' occurrence
-    df = __________
+    df = df.drop_duplicates(df["course_title","subject"])
     
     return df
 
@@ -87,7 +84,7 @@ def add_new_columns(df):
     """
 
     # TODO: Create a new column 'revenue_estimate' by multiplying 'price' and 'num_subscribers'
-    df["revenue_estimate"] = __________
+    df["revenue_estimate"] = df['price']*df['num_subscribers']
     
     return df
 
@@ -99,7 +96,7 @@ def save_cleaned_data(df):
     filename = "cleaned_udemy_courses.csv"
 
     # TODO: Save the dataframe to "cleaned_udemy_courses.csv" without the index
-    __________
+    pd.to_csv('cleaned_udemy_courses.csv')
 
     print(f"\nCleaned data saved to '{filename}'")
 
