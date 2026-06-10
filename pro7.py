@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 # 1. Load Dataset
 def load_data():
     """
@@ -16,11 +19,11 @@ def inspect_data(df):
     """
     print("\nDataset Info:")
     # TODO: Print the info of the dataframe to check types and missing values 
-    print(df.info)
+    print(df.info())
 
     print("\nSummary Statistics:")
     # TODO: Print the summary statistics of the dataset (describe)
-    print(df.summary)
+    print(df.describe())
 
 
 # 3. Handle Missing Data
@@ -31,15 +34,15 @@ def clean_missing(df):
     # 1. Fill missing 'course_title'
     if "course_title" in df.columns:
         # TODO: Fill NaNs in 'course_title' with "Unknown Course"
-        df["course_title"] = df["Unknown Course"]
+        df["course_title"] = df["course_title"].fillna("Unknown Course")
 
     # 2. Fill missing 'num_subscribers'
     # TODO: Fill NaNs in 'num_subscribers' with 0
-    df["num_subscribers"] = df[0]
+    df["num_subscribers"] = df["num_subscribers"].fillna(0)
 
     # 3. Drop rows with critical missing data
     # TODO: Drop rows where 'price' OR 'num_lectures' is missing (NaN)
-    df = df.dropna("price",num_lectures)
+    df = df.dropna(subset=["price","num_lectures"])
 
     return df
 
@@ -51,7 +54,7 @@ def remove_duplicates(df):
     """
     # TODO: Drop duplicate rows based on the subset ['course_title', 'subject']
     # Hint: Keep the 'first' occurrence
-    df = df.drop_duplicates(df["course_title","subject"])
+    df = df.drop_duplicates(subset=["course_title","subject"],keep="first")
     
     return df
 
@@ -63,15 +66,15 @@ def fix_data_types(df):
     """
     # 1. Clean Strings
     # TODO: For 'course_title' and 'subject': strip whitespace and convert to Title Case
-    df["course_title"] = __________
-    df["subject"] = __________
+    df["course_title"] =  df["course_title"].str.strip().str.title()
+    df["subject"] = df["subject"].str.strip().str.title()
 
     # 2. Convert Numbers
     # TODO: Convert 'price' column to float type
-    df["price"] = __________
+    df["price"] = df["price"].astype(float)
 
     # TODO: Convert 'num_subscribers' column to integer type
-    df["num_subscribers"] = __________
+    df["num_subscribers"] =df["num_subscribers"].astype(int)
 
     return df
 
@@ -96,7 +99,7 @@ def save_cleaned_data(df):
     filename = "cleaned_udemy_courses.csv"
 
     # TODO: Save the dataframe to "cleaned_udemy_courses.csv" without the index
-    pd.to_csv('cleaned_udemy_courses.csv')
+    df.to_csv('cleaned_udemy_courses.csv',index=False)
 
     print(f"\nCleaned data saved to '{filename}'")
 
