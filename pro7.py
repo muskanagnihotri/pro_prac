@@ -57,8 +57,6 @@ def remove_duplicates(df):
     df = df.drop_duplicates(subset=["course_title","subject"],keep="first")
     
     return df
-
-
 # 5. Fix Data Types and Clean Strings
 def fix_data_types(df):
     """
