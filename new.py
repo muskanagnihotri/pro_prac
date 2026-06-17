@@ -116,4 +116,27 @@ def plot_order_histogram(df):
 
     print(f"Histogram saved to {output_file}")
 
+if __name__ == "__main__":
+
+    # Load data
+    filename = 'grocery_orders.csv'
+    df = load_grocery_data(filename)
+
+    if not df.empty:
+        print(f"Total Transactions: {len(df)}")
+
+        # 1. Analysis: Category Spending
+        category_totals = calculate_category_spending(df)
+        print("\nSpending Breakdown by Category:")
+        print(category_totals)
+
+        # 2. Visualization: Pie Chart
+        print("\nGenerating Pie Chart...")
+        plot_category_pie(category_totals)
+
+        # 3. Visualization: Histogram
+        print("\nGenerating Histogram...")
+        plot_order_histogram(df)
+
+
 
