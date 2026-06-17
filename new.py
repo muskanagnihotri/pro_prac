@@ -70,3 +70,50 @@ def plot_category_pie(category_totals):
     
     print(f"Pie chart saved to {output_file}")
 
+# 4. Plot Histogram of Order Value
+def plot_order_histogram(df):
+    """
+    Create and save a histogram of individual order values.
+    Shows the distribution of order costs (Are most orders cheap or expensive?).
+    """
+
+    # TODO: Set figure size to 8 inches by 5 inches
+    plt.figure(figsize=(8,5))
+    
+    # TODO: Create a histogram for the 'Total_Price' column
+    plt.hist(
+        df['Total_Price'],
+
+        # TODO: Set the number of bins to 10
+        bins=10,            
+
+        # TODO: Set the Bar color
+        color='skyblue',    
+
+        # TODO: Set the Border color
+        edgecolor='black',  
+
+        # TODO: Set the Transparency value
+        alpha=0.7           
+    )
+    
+    # TODO: Add Title and Labels
+    # Title: "How Much Do Customers Spend? (Order Value Distribution)"
+    # X-label: "Total Bill Amount ($)"
+    # Y-label: "Number of Orders"
+    plt.title('How Much Do Customers Spend? (Order Value Distribution)')
+    plt.xlabel('Total Bill Amount ($)')
+    plt.ylabel('Number of Orders')
+
+    # TODO: Add gridlines only to the y-axis with transparency of 0.5 for readability
+    plt.grid(axis='y',alpha=0.5)
+    
+    # Save the plot
+    output_file = "order_value_histogram.png"
+
+    # TODO: Save the figure to output_file
+    plt.savefig(output_file)
+
+    print(f"Histogram saved to {output_file}")
+
+
