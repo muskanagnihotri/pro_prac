@@ -22,3 +22,14 @@ def load_grocery_data(filename):
     except FileNotFoundError:
         print(f"Error: {filename} not found.")
         return pd.DataFrame()
+
+# 2. Calculate Category Spending Totals
+def calculate_category_spending(df):
+    """
+    Sum total spending for each item category.
+    """
+    # TODO: Group by 'Category' and sum the 'Total_Price' column
+    category_totals = df.groupby('Category')['Total_Price'].sum()
+
+    # TODO: Return the resulting Series
+    return category_totals
