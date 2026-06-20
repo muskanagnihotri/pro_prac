@@ -42,4 +42,14 @@ def clean_delay_data(df):
     
     return df
 
+# 3. Feature Extraction
+def extract_day_features(df):
+    """
+    Extract the 'Day Name' (Monday, Tuesday...) from the Date column.
+    """
 
+    # TODO: Get the name of the day (e.g., "Monday") from the "FlightDate" column
+    # Hint: Use Pandas date accessors to find the day name
+    df["Day_Name"] =df['FlightDate'].dt.day_name()
+    
+    return df
