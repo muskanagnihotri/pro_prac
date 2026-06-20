@@ -92,7 +92,7 @@ def identify_delayed_days(df):
     Find which day of the week has the worst delays on average.
     """
     # TODO: Find the average "DepartureDelay" for each "Day_Name"
-    day_stats =df.groupby('Day_name')['DepartureDelay'].mean()
+    day_stats =df.groupby('Day_Name')['DepartureDelay'].mean()
     
     # TODO: Sort the results so the day with the HIGHEST delay comes first
     # Round the result to 2 decimal places
