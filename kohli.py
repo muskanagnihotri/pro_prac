@@ -46,3 +46,15 @@ def merge_match_opponent(match_df, opponent_df):
     merged_df = pd.merge(merged_df,opponent_df,on='opponent',how='left')
     
     return merged_df
+
+# 4. Analysis Functions
+def total_runs(df):
+    """
+    Calculate total runs scored by Virat Kohli.
+    """
+    runs_column = df["runs"]
+    
+    # TODO: Calculate total runs scored by Virat Kohli
+    total = runs_column.sum()
+    
+    return total
