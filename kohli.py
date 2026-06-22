@@ -20,3 +20,14 @@ def load_data(filename):
     except Exception:
         print(f"Error loading data.")
         return pd.DataFrame()
+    
+# 2. Load Opponent Mapping Data
+def load_opponent_data(filename):
+    try:
+        # TODO: Load the CSV file using Pandas
+        df = pd.read_csv(filename)
+
+        return df
+    except FileNotFoundError:
+        print(f"Error: {filename} not found.")
+        return pd.DataFrame()
