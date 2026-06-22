@@ -31,3 +31,18 @@ def load_opponent_data(filename):
     except FileNotFoundError:
         print(f"Error: {filename} not found.")
         return pd.DataFrame()
+    
+# 3. Merge Match + Opponent Data
+def merge_match_opponent(match_df, opponent_df):
+    """
+    Merge match data with opponent full names.
+    """
+
+    if "opponent" not in match_df.columns or "opponent" not in opponent_df.columns:
+        print("Error: 'opponent' column missing in one of the datasets.")
+        return match_df
+
+    # TODO: Merge the two dataframes on the "opponent" column using a left join
+    merged_df = pd.merge(merged_df,opponent_df,on='opponent',how='left')
+    
+    return merged_df
