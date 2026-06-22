@@ -72,3 +72,18 @@ def average_runs(df):
     average_rounded = average.round(2)
     
     return average_rounded
+
+def runs_by_opponent(df):
+    """
+    Calculate total runs scored against each opponent.
+    """
+    # TODO: Group the data by "opponent" full name
+    grouped_data = df.groupby('opponent')
+
+    # TODO: Sum the runs for each opponent
+    total_runs = grouped_data['runs'].sum()
+    
+    # TODO: Sort the total runs in descending order
+    sorted_runs = total_runs.sort_values('runs',ascending=False)
+    
+    return sorted_runs
