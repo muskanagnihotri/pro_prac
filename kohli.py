@@ -58,3 +58,17 @@ def total_runs(df):
     total = runs_column.sum()
     
     return total
+
+def average_runs(df):
+    """
+    Calculate the average runs per match scored by Virat Kohli.
+    """
+    runs_column = df["runs"]
+    
+    # TODO: Calculate the average runs per match
+    average =runs_column.mean()
+    
+    # TODO: Round the average to 2 decimal places
+    average_rounded = average.round(2)
+    
+    return average_rounded
