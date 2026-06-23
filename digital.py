@@ -74,3 +74,43 @@ def visualize_digital_behavior(df):
     ax1.tick_params(axis='x',rotation=45)
 
 
+    # === PLOT 2: Correlations (Scatter with Color Map) ===
+    # TODO: Create a scatter plot on axis ax2
+    # x = 'Unlocks', y = 'ScreenTime'
+    # This maps color to App Usage
+    # Set colormap to 'viridis'
+    # Set transparency to 0.7 (Explore alpha parameter)
+    scatter = ax2.scatter(
+        df['Unlocks'],
+        df['ScreenTime'], 
+        c=df['AppUsage'], 
+        cmap='viridis',
+        alpha=0.7
+    )
+
+    # Labels
+    # TODO: Add title to ax2 "Unlocks vs. Screen Time"
+    ax2.set_title('Unlocks vs. Screen Time')
+
+    # TODO: Add X axis label 'Unlocks' and Y axis label 'Screen Time'
+    ax2.set_xlabel('Unlocks')
+    ax2.set_ylabel('Screen Time')
+
+    # TODO: Add a Colorbar to explain the colors
+    # Pass the 'scatter' object and the axis 'ax2'
+    # Set the label to 'App Usage (Hours)'
+    fig.colorbar(scatter,ax=ax2,label='App Usage (Hours)')
+
+    # TODO: Adjust layout using tight_layout function and save the figure as a PNG file (digital_behaviour_analysis.png)
+    plt.tight_layout()
+    plt.savefig('digital_behaviour_analysis.png')
+
+    print("Plot saved as 'digital_behaviour_analysis.png'")
+
+if __name__ == "__main__":
+    df = load_data(FILE_NAME)
+    
+    if not df.empty:
+        visualize_digital_behavior(df)
+
+
