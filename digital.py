@@ -58,7 +58,7 @@ def visualize_digital_behavior(df):
     # TODO: Add a horizontal line for the daily limit
     # Use y=DAILY_LIMIT, color='red' and make this line dashed
     # Label it 'Daily Limit'
-    ax1.axhline(df['DAILY_LIMIT'],color='red',linestyle='--',label='Daily Limit')
+    ax1.axhline(y=DAILY_LIMIT,color='red',linestyle='--',label='Daily Limit')
     # Labels
     # TODO: Add a title to ax1 "Daily Usage Trends"
     ax1.set_title('Daily Usage Trends')
