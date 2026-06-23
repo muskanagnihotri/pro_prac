@@ -72,3 +72,5 @@ def visualize_digital_behavior(df):
     
     # TODO: Rotate date labels by 45 degrees for better readability
     ax1.tick_params(axis='x',rotation=45)
+
+
