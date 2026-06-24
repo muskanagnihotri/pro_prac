@@ -113,3 +113,46 @@ def plot_hashtag_vs_reach(df):
     
     print("Saved: hashtag_reach_trend.png")
 
+# 4. === Residual Analysis (Unexpected Viral Behavior) ===
+def plot_residual_analysis(df):
+    """
+    Use a Residual Plot to see 'outlier' performance.
+    Points far from 0 line = Posts performing much better/worse than expected.
+    """
+    # TODO: Set figure size to 10 inches by 6 inches
+    plt.figure(figsize=(10,6))
+
+    # TODO: Create a Residual Plot (residplot)
+    # Arguments:
+    # - X axis: "hashtags_count"
+    # - Y axis: "reach"
+    # - data: df
+    # - Make the points purple
+    sns.residplot(
+        x='hashtags_count',
+        y='reach',
+        data=df,
+        scatter_kws={'color':'purple'}
+    )
+
+    # TODO: Add a reference line at 0 (y=0) (Expected Performance)
+    # # Color: Black, Linestyle: Dashed ("--")
+    plt.axhline(y=0,color='black',linestyle='--')
+
+    # TODO: Set title to "Residual Analysis: Viral Outliers (Observed - Expected)"
+    plt.title('Residual Analysis: Viral Outliers (Observed - Expected)')
+    
+    # TODO: Set x-axis label to "Number of Hashtags"
+    plt.xlabel('Number of Hashtags')
+    
+    # TODO: Set y-axis label to "Residual Reach (Deviation)"
+    plt.ylabel('Residual Reach (Deviation)')
+
+    # TODO: Adjust layout using tight_layout() and save as "viral_residual_analysis.png"
+    plt.tight_layout()
+    plt.savefig('viral_residual_analysis.png')
+    
+    print("Saved: viral_residual_analysis.png")
+
+
+
