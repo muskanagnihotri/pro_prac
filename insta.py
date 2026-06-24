@@ -154,5 +154,24 @@ def plot_residual_analysis(df):
     
     print("Saved: viral_residual_analysis.png")
 
+if __name__ == "__main__":
+    print("### Instagram Viral Trends Analytics ###")
+
+    df = load_instagram_data(FILE_NAME)
+
+    if not df.empty:
+        # 1. Correlation Analysis (Heatmap)
+        plot_engagement_correlation(df)
+
+        # 2. Hashtag Trend Analysis (Regression)
+        plot_hashtag_vs_reach(df)
+
+        # 3. Residual Analysis (Residplot)
+        plot_residual_analysis(df)
+
+    else:
+        print("Analysis stopped.")
+
+        
 
 
