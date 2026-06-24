@@ -18,7 +18,7 @@ def load_instagram_data(filename):
     """
     try:
         # TODO: Read the CSV file into a dataframe
-        df =pd.read_csv('filename')
+        df =pd.read_csv(filename)
         
         print(f"Data Loaded Successfully: {len(df)} posts.")
         print(f"Columns: {list(df.columns)}")
@@ -29,3 +29,49 @@ def load_instagram_data(filename):
     except FileNotFoundError:
         print(f"Error: {filename} not found.")
         return pd.DataFrame()
+
+# 2. === Correlation Heatmap ===
+def plot_engagement_correlation(df):
+    """
+    Visualize correlation between engagement metrics using a Heatmap.
+    """
+    # Numeric engagement columns
+    engagement_cols = [
+        "likes",
+        "comments",
+        "shares",
+        "saves",
+        "reach"
+    ]
+    
+    # TODO: Calculate correlation matrix using .corr() on the selected columns
+    corr_matrix = df['engagement_cols'].corr()
+
+    # TODO: Set figure size to 10 inches by 8 inches
+    plt.figure(figsize=(10,8))
+
+    # TODO: Create a Heatmap
+    # Arguments:
+    # - Data for this heatmap is the correlation matrix
+    # - Show numbers on the blocks (Explore the annot parameter)
+    # - Set the color map to "coolwarm"
+    # - Format numbers to 2 decimal places (Explore the fmt parameter)
+    # - Set the line widths between cells to 0.5
+    sns.heatmap(
+        corr_matrix,
+        annot=True, 
+        cmap='coolwarm', 
+        fmt='.2f',
+        linewidths=0.5
+    )
+
+    # TODO: Set the title to "Instagram Engagement Correlation Heatmap"
+    plt.title('Instagram Engagement Correlation Heatmap')
+    
+    # TODO: Adjust layout with tight_layout()
+    plt.tight_layout()
+    
+    # TODO: Save the figure as "engagement_correlation_heatmap.png"
+    plt.savefig('engagement_correlation_heatmap.png')
+    
+    print("Saved: engagement_correlation_heatmap.png")
