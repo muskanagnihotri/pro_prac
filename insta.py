@@ -45,7 +45,7 @@ def plot_engagement_correlation(df):
     ]
     
     # TODO: Calculate correlation matrix using .corr() on the selected columns
-    corr_matrix = df['engagement_cols'].corr()
+    corr_matrix = df[engagement_cols].corr()
 
     # TODO: Set figure size to 10 inches by 8 inches
     plt.figure(figsize=(10,8))
@@ -132,7 +132,7 @@ def plot_residual_analysis(df):
         x='hashtags_count',
         y='reach',
         data=df,
-        scatter_kws={'color':'purple'}
+        color='purple'
     )
 
     # TODO: Add a reference line at 0 (y=0) (Expected Performance)
@@ -172,6 +172,6 @@ if __name__ == "__main__":
     else:
         print("Analysis stopped.")
 
-        
+
 
 
