@@ -75,3 +75,41 @@ def plot_engagement_correlation(df):
     plt.savefig('engagement_correlation_heatmap.png')
     
     print("Saved: engagement_correlation_heatmap.png")
+
+
+# 3. === Hashtag Impact Trend (Regression Plot) ===
+def plot_hashtag_vs_reach(df):
+    """
+    Analyze relationship between hashtags and reach using Regression.
+    """
+    # TODO: Set figure size to 10 inches by 6 inches
+    plt.figure(figsize=(10,6))
+
+    # TODO: Create a Regression Plot (regplot)
+    # Arguments:
+    # - X axis: "hashtags_count"
+    # - Y axis: "reach"
+    # - data: df
+    # - Make scatter points green (Explore the scatter_kws parameter)
+    # - Make the Trend line red (Explore the line_kws parameter)
+    sns.regplot(
+        x='hashtags_count',
+        y='reach', 
+        data=df, 
+        scatter_kws={'color':'green'},
+        line_kws={'color':'red'}
+    )
+
+    # TODO: Set title to "Hashtag Count vs. Reach Trend"
+    plt.title('Hashtag Count vs. Reach Trend')
+    
+    # TODO: Set x-axis label to "Number of Hashtags" and y-axis label to "Post Reach"
+    plt.xlabel('Number of Hashtags')
+    plt.ylabel('Post Reach')
+
+    # TODO: Adjust layout using tight_layout() and save as "hashtag_reach_trend.png"
+    plt.tight_layout()
+    plt.savefig('hashtag_reach_trend.png')
+    
+    print("Saved: hashtag_reach_trend.png")
+
