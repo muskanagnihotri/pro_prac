@@ -56,3 +56,11 @@ else:
 # K. Find the number of the player who will have the ball in the end, given that player 
 # 1
 # 1 starts with it.
+
+t=int(input())
+for i in range(t):
+    n,k=map(int,input().split())
+    p=1 
+    while p+k<=n:
+        p+=k 
+    print(p)
