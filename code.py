@@ -9,3 +9,9 @@
 # T kilometers, which happens instantly and doesn't require any time.
 # The teleport can be used at most once.
 # Find the minimum time, in hours, that Chef needs to reach home.
+
+d,t=map(int,input().split())
+if d>t:
+    print(d-t)
+else:
+    print(0)
