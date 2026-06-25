@@ -15,3 +15,44 @@ if d>t:
     print(d-t)
 else:
     print(0)
+
+# Passing Chain
+# N
+# N football players stand in a line in order to practice their passes.
+# The players are numbered 
+# 1
+# 1 to 
+# N
+# N.
+# Initially, player 
+# 1
+# 1 has the ball.
+
+# All the players have a passing power of 
+# K
+# K.
+# At any point of time, if player 
+# X
+# X has the ball:
+
+# If 
+# X
+# +
+# K
+# ≤
+# N
+# X+K≤N, the ball will be passed to player 
+# X
+# +
+# K
+# X+K.
+# Otherwise, the ball will remain with player 
+# X
+# X.
+# You are given 
+# N
+# N and 
+# K
+# K. Find the number of the player who will have the ball in the end, given that player 
+# 1
+# 1 starts with it.
