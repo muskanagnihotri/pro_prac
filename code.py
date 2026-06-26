@@ -62,3 +62,5 @@ for i in range(t):
     while p+k<=n:
         p+=k 
     print(p)
+
+# question number third 
