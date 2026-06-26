@@ -64,90 +64,90 @@ for i in range(t):
     print(p)
 
 # question number third 
-Carrot Collection
-Deep in a forest live a bear and a rabbit.
+# Carrot Collection
+# Deep in a forest live a bear and a rabbit.
 
-The forest has 
-N
-N clearings, numbered from 
-1
-1 to 
-N
-N.
-Clearing 
-i
-i has 
-A
-i
-A 
-i
-​
-  carrots growing in it.
+# The forest has 
+# N
+# N clearings, numbered from 
+# 1
+# 1 to 
+# N
+# N.
+# Clearing 
+# i
+# i has 
+# A
+# i
+# A 
+# i
+# ​
+#   carrots growing in it.
 
-The bear patrols several zones of the forest - specifically, you are given integers 
-L
-L and 
-R
-R, such that the bear patrols clearings 
-L
-,
-L
-+
-1
-,
-L
-+
-2
-,
-…
-,
-R
-L,L+1,L+2,…,R.
-It is guaranteed that either 
-L
->
-1
-L>1 or 
-R
-<
-N
-R<N, i.e. there exists at least one clearing not patrolled by the bear.
+# The bear patrols several zones of the forest - specifically, you are given integers 
+# L
+# L and 
+# R
+# R, such that the bear patrols clearings 
+# L
+# ,
+# L
+# +
+# 1
+# ,
+# L
+# +
+# 2
+# ,
+# …
+# ,
+# R
+# L,L+1,L+2,…,R.
+# It is guaranteed that either 
+# L
+# >
+# 1
+# L>1 or 
+# R
+# <
+# N
+# R<N, i.e. there exists at least one clearing not patrolled by the bear.
 
-The rabbit wants to collect some of the carrots from the forest.
-This will be done via the following process:
+# The rabbit wants to collect some of the carrots from the forest.
+# This will be done via the following process:
 
-Let 
-X
-X be the current clearing the rabbit is in.
-The rabbit can do any one of the following three things:
-Take all carrots from clearing 
-X
-X. This is allowed only if clearing 
-X
-X still has carrots.
-Move to clearing 
-X
-−
-1
-X−1. This is allowed only if 
-X
->
-1
-X>1.
-Move to clearing 
-X
-+
-1
-X+1. This is allowed only if 
-X
-<
-N
-X<N.
-The left/right moves can be done as many times as you like, and it is allowed to visit the same clearing multiple times if you wish.
-However, the rabbit cannot visit any clearing that's being patrolled by the bear.
+# Let 
+# X
+# X be the current clearing the rabbit is in.
+# The rabbit can do any one of the following three things:
+# Take all carrots from clearing 
+# X
+# X. This is allowed only if clearing 
+# X
+# X still has carrots.
+# Move to clearing 
+# X
+# −
+# 1
+# X−1. This is allowed only if 
+# X
+# >
+# 1
+# X>1.
+# Move to clearing 
+# X
+# +
+# 1
+# X+1. This is allowed only if 
+# X
+# <
+# N
+# X<N.
+# The left/right moves can be done as many times as you like, and it is allowed to visit the same clearing multiple times if you wish.
+# However, the rabbit cannot visit any clearing that's being patrolled by the bear.
 
-The initial value of s
-X
-X can be chosen freely by the rabbit; as long as it is some clearing that's not patrolled.
+# The initial value of s
+# X
+# X can be chosen freely by the rabbit; as long as it is some clearing that's not patrolled.
 
-Find the maximum possible number of carrots the rabbit can collect under the above conditions.
+# Find the maximum possible number of carrots the rabbit can collect under the above conditions.
