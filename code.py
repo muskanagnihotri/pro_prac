@@ -151,3 +151,11 @@ for i in range(t):
 # X can be chosen freely by the rabbit; as long as it is some clearing that's not patrolled.
 
 # Find the maximum possible number of carrots the rabbit can collect under the above conditions.
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,l,r=map(int,input().split())
+    arr=list(map(int,input().split()))
+    s1=sum(arr[:l-1])
+    s2=sum(arr[r:])
+    print(max(s1,s2))
