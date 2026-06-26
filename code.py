@@ -27,14 +27,12 @@ else:
 # Initially, player 
 # 1
 # 1 has the ball.
-
 # All the players have a passing power of 
 # K
 # K.
 # At any point of time, if player 
 # X
 # X has the ball:
-
 # If 
 # X
 # +
