@@ -159,3 +159,5 @@ for i in range(t):
     s1=sum(arr[:l-1])
     s2=sum(arr[r:])
     print(max(s1,s2))
+
+# new ques
