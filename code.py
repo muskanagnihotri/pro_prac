@@ -161,3 +161,11 @@ for i in range(t):
     print(max(s1,s2))
 
 # new ques
+# Movie Night
+# Chef is watching a movie that lasts for 
+# H
+# H hours and 
+# M
+# M minutes.
+# To plan the rest of his day efficiently, Chef wants to know the total duration of the movie completely in minutes.
+# Help Chef find the total duration of the movie in minutes.
