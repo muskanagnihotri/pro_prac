@@ -169,3 +169,7 @@ for i in range(t):
 # M minutes.
 # To plan the rest of his day efficiently, Chef wants to know the total duration of the movie completely in minutes.
 # Help Chef find the total duration of the movie in minutes.
+def getTotalDuration(H: int, M: int) -> int:
+    p=(60*H)+M
+    return p 
+    
