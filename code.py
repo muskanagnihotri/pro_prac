@@ -172,4 +172,6 @@ for i in range(t):
 def getTotalDuration(H: int, M: int) -> int:
     p=(60*H)+M
     return p 
+
+
     
