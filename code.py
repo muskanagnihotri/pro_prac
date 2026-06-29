@@ -176,3 +176,4 @@ def getTotalDuration(H: int, M: int) -> int:
 # ques 5 dsa code
 # Find smallest and largest numbers
 # Given an array of integers, your task is to find the smallest (minimum) and largest (maximum) elements present in the array.
+# solution
