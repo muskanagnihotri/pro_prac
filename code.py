@@ -173,5 +173,4 @@ def getTotalDuration(H: int, M: int) -> int:
     p=(60*H)+M
     return p 
 
-
-    
+# ques 5 dsa code
