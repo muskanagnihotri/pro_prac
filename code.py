@@ -181,3 +181,4 @@ def findMinMax(n: int, arr: list[int]) -> list[int]:
     p=max(arr)
     q=min(arr)
     return q,p
+
