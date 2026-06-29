@@ -177,3 +177,7 @@ def getTotalDuration(H: int, M: int) -> int:
 # Find smallest and largest numbers
 # Given an array of integers, your task is to find the smallest (minimum) and largest (maximum) elements present in the array.
 # solution
+def findMinMax(n: int, arr: list[int]) -> list[int]:
+    p=max(arr)
+    q=min(arr)
+    return q,p
