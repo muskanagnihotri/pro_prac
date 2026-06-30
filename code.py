@@ -183,3 +183,10 @@ def findMinMax(n: int, arr: list[int]) -> list[int]:
     return q,p
 
 # dsa ques 6 anagram 
+
+n=int(input())
+c=set(input())
+for i in range(n-1):
+    w=set(input())
+    c&=w 
+print("".join(sorted(c)))
