@@ -186,13 +186,11 @@ def findMinMax(n: int, arr: list[int]) -> list[int]:
 You are given 
 N
 N strings consisting of lowercase English letters.
-
 Your goal is to find the longest string 
 W
 W such that the letters of 
 W
 W (including duplicates) appear in every string in the given set.
-
 Specifically, if a letter appears 
 k
 k times in 
