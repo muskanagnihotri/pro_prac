@@ -182,3 +182,4 @@ def findMinMax(n: int, arr: list[int]) -> list[int]:
     q=min(arr)
     return q,p
 
+# dsa ques 6 anagram 
