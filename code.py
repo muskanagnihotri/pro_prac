@@ -183,24 +183,24 @@ def findMinMax(n: int, arr: list[int]) -> list[int]:
     return q,p
 
 # dsa ques 6 anagram 
-You are given 
-N
-N strings consisting of lowercase English letters.
-Your goal is to find the longest string 
-W
-W such that the letters of 
-W
-W (including duplicates) appear in every string in the given set.
-Specifically, if a letter appears 
-k
-k times in 
-W
-W, it must appear at least 
-k
-k times in each of the 
-N
-N input strings.
-If there are multiple such strings of the maximum possible length, choose the one that is lexicographically smallest (i.e., in alphabetical order). If no such non-empty string can be formed, output no such string (without quotes).
+# You are given 
+# N
+# N strings consisting of lowercase English letters.
+# Your goal is to find the longest string 
+# W
+# W such that the letters of 
+# W
+# W (including duplicates) appear in every string in the given set.
+# Specifically, if a letter appears 
+# k
+# k times in 
+# W
+# W, it must appear at least 
+# k
+# k times in each of the 
+# N
+# N input strings.
+# If there are multiple such strings of the maximum possible length, choose the one that is lexicographically smallest (i.e., in alphabetical order). If no such non-empty string can be formed, output no such string (without quotes).
 n=int(input())
 c=set(input())
 for i in range(n-1):
