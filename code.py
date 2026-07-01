@@ -216,3 +216,11 @@ print("".join(sorted(c)))
 # Writing an editorial earns him 
 # B B XP.
 # Today, Chef solved P problems and wrote E editorials. Find the total XP earned by Chef today.
+import sys
+def main(a,b,c,d):
+    p=a*c 
+    q=b*d 
+    return p+q 
+a,b,c,d=map(int,input().split())
+print(main(a,b,c,d))
+    
