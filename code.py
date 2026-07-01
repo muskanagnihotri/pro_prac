@@ -207,3 +207,6 @@ for i in range(n-1):
     w=set(input())
     c&=w 
 print("".join(sorted(c)))
+
+# ques 7 codechef
+
