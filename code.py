@@ -209,4 +209,10 @@ for i in range(n-1):
 print("".join(sorted(c)))
 
 # ques 7 codechef
-
+CodeChef XP
+Chef is active on CodeChef and earns XP by contributing to the platform.
+Solving a problem earns him A
+A XP.
+Writing an editorial earns him 
+B B XP.
+Today, Chef solved P problems and wrote E editorials. Find the total XP earned by Chef today.
