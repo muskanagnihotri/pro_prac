@@ -228,10 +228,10 @@ print(main(a,b,c,d))
 # ques 8 codechef
 # contest ques
 
-Chef loves his own name. So, he likes a word if and only if it either starts with the letter 'c', or ends with the letter 'f' (or both).
-You are given a string 
-S that represents a four-letter word.
-S contains only lowercase English letters
-Does Chef like the word represented by string 
+# Chef loves his own name. So, he likes a word if and only if it either starts with the letter 'c', or ends with the letter 'f' (or both).
+# You are given a string 
+# S that represents a four-letter word.
+# S contains only lowercase English letters
+# Does Chef like the word represented by string 
 
     
