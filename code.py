@@ -233,5 +233,11 @@ print(main(a,b,c,d))
 # S that represents a four-letter word.
 # S contains only lowercase English letters
 # Does Chef like the word represented by string 
+s=input()
+k=list(s)
+if k[0]=="c" or k[-1]=="f":
+    print("Yes")
+else:
+    print("No")
 
     
