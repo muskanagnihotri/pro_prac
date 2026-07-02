@@ -216,6 +216,7 @@ print("".join(sorted(c)))
 # Writing an editorial earns him 
 # B B XP.
 # Today, Chef solved P problems and wrote E editorials. Find the total XP earned by Chef today.
+import string
 import sys
 def main(a,b,c,d):
     p=a*c 
@@ -228,13 +229,9 @@ print(main(a,b,c,d))
 # contest ques
 
 Chef loves his own name. So, he likes a word if and only if it either starts with the letter 'c', or ends with the letter 'f' (or both).
-
 You are given a string 
-
 S that represents a four-letter word.
-
-S contains only lowercase English letters.
-
+S contains only lowercase English letters
 Does Chef like the word represented by string 
 
     
