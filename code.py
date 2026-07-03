@@ -240,6 +240,8 @@ if k[0]=="c" or k[-1]=="f":
 else:
     print("No")
 
+# 245 contest codechef
+
     
 
     
