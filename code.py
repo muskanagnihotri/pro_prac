@@ -242,24 +242,24 @@ else:
 
 # 245 contest codechef
 # ques- 
-Cooling Conundrum
-Chef is preparing a dessert, and as part of the process, needs to cool the dessert down a bit.
-The current temperature of the dessert is 
-X
-X degrees, and Chef wants it to be at 
-Y
-Y degrees (where 
-X
->
-Y
-X>Y).
-Chef's refrigerator can cool the dessert, but the time it takes depends on the current temperature of the dish.
-Specifically, if the current temperature of the dish is 
-K degrees, then the refrigerator will take 
-10
-10 seconds, rounded up to the nearest integer, to reduce the temperature of the dish by 
-1
-1 degree.
+# Cooling Conundrum
+# Chef is preparing a dessert, and as part of the process, needs to cool the dessert down a bit.
+# The current temperature of the dessert is 
+# X
+# X degrees, and Chef wants it to be at 
+# Y
+# Y degrees (where 
+# X
+# >
+# Y
+# X>Y).
+# Chef's refrigerator can cool the dessert, but the time it takes depends on the current temperature of the dish.
+# Specifically, if the current temperature of the dish is 
+# K degrees, then the refrigerator will take 
+# 10
+# 10 seconds, rounded up to the nearest integer, to reduce the temperature of the dish by 
+# 1
+# 1 degree.
     
 
     
