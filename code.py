@@ -241,6 +241,7 @@ else:
     print("No")
 
 # 245 contest codechef
+# ques- 
 
     
 
