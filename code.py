@@ -260,6 +260,9 @@ else:
 # 10 seconds, rounded up to the nearest integer, to reduce the temperature of the dish by 
 # 1
 # 1 degree.
+t=int(input())
+for i in range(t):
+    x,y=map(int,input().split())
     
 
     
