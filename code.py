@@ -309,7 +309,7 @@ for i in range(t):
 # X
 # X in such a way that the following condition holds:
 # The number of red stones and the number of blue stones in the shop both remain non-negative at all points of time.
-solution 
+# solution 
 
 
     
