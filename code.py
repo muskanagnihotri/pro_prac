@@ -280,96 +280,34 @@ for i in range(t):
 # i
 # i-th customer will request a trade with parameter 
 #  , where:
-# If 
-# A
-# i
-# >
-# 0
-# A 
-# i
-# ​
-#  >0, then the 
+# , then the 
 # i
 # i-th customer will give 
-# A
-# i
-# A 
-# i
-# ​
 #   red stones to the shop, and wants 
-# A
-# i
-# A 
-# i
-# ​
 #   blue stones in return.
-# If 
-# A
-# i
-# <
-# 0
-# A 
-# i
-# ​
 #  <0, then the 
 # i
 # i-th customer will give 
-# −
-# A
-# i
-# −A 
-# i
-# ​
 #   blue stones to the shop, and wants 
-# −
-# A
-# i
-# −A 
-# i
-# ​
 #   red stones in return.
 # It is guaranteed that 
-# A
-# i
-# ≠
-# 0
-# A 
-# i
 # ​
 #  =0 for all 
-# 1
-# ≤
-# i
-# ≤
-# N
 # 1≤i≤N.
-
 # The shop can only hold a total of 
 # K
 # K stones.
 # At the start of the day, before any customers enter, the shopkeeper will choose an integer 
-# X
-# X (
-# 0
-# ≤
-# X
-# ≤
-# K
 # 0≤X≤K), and stock the shop with 
 # X
 # X red stones and 
-# K
-# −
-# X
 # K−X blue stones.
-
 # Determine if it is possible for the shopkeeper process all 
 # N
 # N trades without ever running out of stones of either color.
 # More formally, determine if it is possible to choose 
 # X
 # X in such a way that the following condition holds:
-
 # The number of red stones and the number of blue stones in the shop both remain non-negative at all points of time.
 
 
