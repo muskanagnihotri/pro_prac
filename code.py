@@ -269,5 +269,7 @@ for i in range(t):
         m+=math.ceil(i/10)
     print(m)
     
+# ques3 codechef 
+
 
     
